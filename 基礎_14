@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char input[100], output[100];
+    int a = 1;
+
+    scanf("%s", input);
+
+    // Reverse the string and store it in 'output'
+    int length = strlen(input);
+    for (int i = length - 1; i >= 0; i--){
+        output[length - 1 - i] = input[i];
+    }
+
+    // Compare the original string with the reversed string
+    for (int j = 0; j < length; j++){
+        if (input[j] != output[j]){
+            a = 0;
+            break;
+        } else {
+            a = 1;
+        }
+    }
+
+    // Output the result
+    a ? printf("YES\n") : printf("NO\n");
+
+    return 0;
+}
+
