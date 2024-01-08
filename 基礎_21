@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+    float input, ar[10], max, min;
+
+    scanf("%f", &input);
+    max = input;
+    min = input;
+
+    for (int i = 1; i < 10; i++){
+        scanf("%f", &input);
+        ar[i] = input;
+
+        if (ar[i] > max){
+            max = ar[i];
+        }
+
+        if (ar[i] < min){
+            min = ar[i];
+        }
+    }
+    printf("maximum:%.2f\n", max);
+    printf("minimum:%.2f\n", min);
+
+    return 0;
+}
