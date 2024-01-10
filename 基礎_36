@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+    int in = 0;
+    while (scanf("%d", &in) != EOF){
+        if (in % 400 == 0)
+            printf("Bissextile Year\n");
+        else {
+            if (in % 100 == 0)
+                printf("Common Year\n");
+            else
+                (in % 4 == 0) ? printf("Bissextile Year\n") : printf("Common Year\n");
+        }
+    }
+    return 0;
+}
