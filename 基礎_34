@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    while (1){
+        float h;
+        int se;
+
+        if (scanf("%f %d", &h, &se) == EOF){
+            break; // 當輸入結束時退出迴圈
+        }
+
+        if (se == 1){
+            printf("%.1f\n", (h - 80) * 0.7);
+        } else {
+            printf("%.1f\n", (h - 70) * 0.6);
+        }
+    }
+
+    return 0;
+}
