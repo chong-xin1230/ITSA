@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    char in[1000];
+    fgets(in, sizeof(in), stdin);
+    int p;
+    scanf("%d", &p);
+
+    for (int i = 0; in[i] != '\0'; i++){
+        if (in[i] >= 'A' && in[i] <= 'Z'){
+            in[i] = ((in[i] - 'A' + p) % 26) + 'A';
+        } else if (in[i] >= 'a' && in[i] <= 'z'){
+            in[i] = ((in[i] - 'a' + p) % 26) + 'a';
+        } else if (in[i] >= '0' && in[i] <= '9'){
+            in[i] = ((in[i] - '0' + p) % 10) + '0';
+        }
+    }
+
+    printf("%s", in);
+
+    return 0;
+}
