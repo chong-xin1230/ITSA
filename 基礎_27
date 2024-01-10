@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main(){
+    int an = 0, ana[4], ain[4];
+    scanf("%d", &an);
+
+    for (int i = 3; i >= 0; i--){
+        ana[i] = 0;
+        ain[i] = 0;
+        ana[i] = an % 10;
+        an /= 10;
+    }
+
+    while (1){
+        int in = 0, a = 0, b = 0;
+        scanf("%d", &in);
+        an = 0;
+
+        for (int i = 3; i >= 0; i--){
+            ain[i] = in % 10;
+            in /= 10;
+
+            if (ain[i] == 0){
+                an++;
+            }
+
+            if (ain[i] == ana[i]){
+                a++;
+                continue;
+            } else {
+                for (int j = 0; j < 4; j++){
+                    if (ain[i] == ana[j] && j != i){
+                        b++;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (an == 4){
+            break;
+        } else {
+            printf("%dA%dB\n", a, b);
+        }
+    }
+
+    return 0;
+}
