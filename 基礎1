@@ -16,7 +16,7 @@ int main(){
             int d = s[i] - '0';
             if (i)
                 printf(" ");
-            printf("%s", display[j][d]);
+            printf("%s", display[j][d]);//d[j][d][%s]
         }
         printf("\n");
     }
