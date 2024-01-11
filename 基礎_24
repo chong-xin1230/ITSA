@@ -2,27 +2,25 @@
 #include <math.h>
 #include <stdbool.h>
 
-// 函數原型聲明
 void calculateCompoundInterest(double r, int p, int n);
 
 int main(){
-    // 輸入本金、年利率和年數
+
     double principal = 0;
     int years = 0, rate = 0;
     scanf("%lf %d %d", &principal, &years, &rate);
 
-    // 呼叫計算複利的函數
     calculateCompoundInterest(principal, rate, years);
 
     return 0;
 }
 
-// 計算複利的函數
+
 void calculateCompoundInterest(double principal, int rate, int years){
     int startRate = rate;
     int principalArray[30], tempArray[30], rateTimes1000 = floor(principal * 1000);
 
-    // 初始化陣列
+
     for (int i = 0; i < 30; i++){
         if (i >= 0 && i < 11)
             principalArray[i] = 0;
