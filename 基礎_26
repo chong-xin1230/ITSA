@@ -31,7 +31,7 @@ void sort(int c[], int m){
         b[j] = 0;
         int a = c[j];
 
-        while (a > 0){
+        while (a > 0){//各位數累加
             b[j] += a % 10;
             a /= 10;
         }
