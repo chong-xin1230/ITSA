@@ -27,7 +27,7 @@ int main(){
             if (ain[i] == ana[i]){
                 a++;
                 continue;
-            } else {
+            } else {//是否有重複
                 for (int j = 0; j < 4; j++){
                     if (ain[i] == ana[j] && j != i){
                         b++;
