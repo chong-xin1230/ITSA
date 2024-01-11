@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int an = 0, ana[4], ain[4];
+    int an = 0, ana[4], ain[4];  // ana is ans, ain is input
     scanf("%d", &an);
 
     for (int i = 3; i >= 0; i--){
