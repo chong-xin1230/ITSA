@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(){
+int main(){//設一個arr來記錄時段重疊與否，輸出最大重疊數即派車數
     int inputN = 0, t[24] = {0}; 
     scanf("%d", &inputN);
 
