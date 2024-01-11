@@ -6,7 +6,7 @@ int main(){
         int se;
 
         if (scanf("%f %d", &h, &se) == EOF){
-            break; // 當輸入結束時退出迴圈
+            break;
         }
 
         if (se == 1){
